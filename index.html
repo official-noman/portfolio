@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Noman | Software Engineer</title>
+    
+    <!-- Google Fonts (Outfit for a modern, tech look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons (For logos and symbols) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- =========================================
+             HERO SECTION (Introduction)
+        ========================================== -->
+        <header>
+            <div class="glow-bg"></div> <!-- Background light effect -->
+            
+            <!-- Profile Image -->
+            <img src="profile.jpg" alt="Abdullah Al Noman" class="profile-img">
+            
+            <span class="hero-tag">Hello, I'm Abdullah Al Noman</span>
+            
+            <!-- Main Headline -->
+            <h1>
+                Architecting Scalable <br> 
+                <span class="gradient-text">Cloud-Native Systems</span>
+            </h1>
+            
+            <!-- Sub-headline / Bio -->
+            <p class="hero-sub">
+                Aspiring Software Engineer specialized in <strong>Python, Django & AWS</strong>. 
+                I build production-ready backend systems, integrate Local AI (Ollama), 
+                and automate deployments using Docker & CI/CD pipelines.
+            </p>
+            
+            <!-- Call to Action Buttons -->
+            <div class="cta-wrapper">
+    
+    <!-- Primary Action  -->
+    <button onclick="openModal('contactModal')" class="btn btn-primary main-cta">
+        <i class="fa-solid fa-paper-plane"></i> Contact Me
+    </button>
+
+    <!-- Secondary Actions -->
+    <div class="secondary-actions">
+        <a href="https://github.com/official-noman" target="_blank" class="btn btn-outline small-btn">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        
+        <!-- Resume Button -->
+        <a href="resume.pdf" download="Abdullah_Al_Noman_Resume" class="btn btn-outline small-btn">
+            <i class="fa-solid fa-file-arrow-down"></i> Resume
+        </a>
+    </div>
+
+</div>
+        </header>
+
+        <!-- =========================================
+             SKILLS SECTION (Categorized)
+        ========================================== -->
+        <section>
+            <h2>Technical Skill</h2>
+            
+            <!-- Category: Languages -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Python (Expert)</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">SQL</div>
+                </div>
+            </div>
+
+            <!-- Category: Backend -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-server"></i> Backend & Database</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Django & DRF</div>
+                    <div class="skill-item">PostgreSQL</div>
+                    <div class="skill-item">MySQL</div>
+                    <div class="skill-item">SQLite</div>
+                </div>
+            </div>
+
+            <!-- Category: DevOps -->
+            <div class="skill-category">
+                <h3><i class="fa-solid fa-cloud"></i> Cloud & DevOps</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Docker</div>
+                    <div class="skill-item">AWS (EC2)</div>
+                    <div class="skill-item">GitHub Actions (CI/CD)</div>
+                    <div class="skill-item">Nginx</div>
+                    <div class="skill-item">Linux Admin</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Preview Section -->
+<section style="margin-top: 50px; text-align: center;">
+    <p style="color: #cbd5e1; max-width: 700px; margin: 0 auto;">
+        I am more than just code. I am a storyteller, an athlete, and a community leader.
+        <br>
+        <span onclick="openModal('aboutModal')" style="color: var(--accent-primary); cursor: pointer; font-weight: 600; text-decoration: underline;">
+            Read My Story
+        </span>
+    </p>
+</section>
+
+<!-- About Me Modal (Personal Touch) -->
+<div class="modal-overlay" id="aboutModal">
+    <div class="modal-box large-box">
+        <span class="close-btn" onclick="closeModal('aboutModal')">&times;</span>
+        <h2>👨‍💻 Behind the Code</h2>
+        
+        <div class="modal-content-scroll">
+            <p>Hi, I'm <strong>Abdullah Al Noman</strong>. While my GitHub shows my commit history, it doesn't tell the full story.</p>
+            
+            <h4 style="color: var(--accent-primary); margin-top: 20px;">🚀 Why Engineering?</h4>
+            <p>I’ve always been fascinated by how abstract logic can solve real-world problems. Whether it's optimizing an algorithm for a contest or building a sustainable upcycling platform like <strong>RemakeX</strong>, I love the thrill of creating something impactful.</p>
+            
+            <h4 style="color: var(--accent-primary); margin-top: 20px;">⚽ The Team Player</h4>
+            <p>My time on the football field and table tennis court taught me resilience. Programming contests taught me how to handle pressure. As the <strong>President of the Indoor Games Club</strong>, I learned that leading a team is about empathy, not just orders.</p>
+            
+            <h4 style="color: var(--accent-primary); margin-top: 20px;">✍️ The Creative Side</h4>
+            <p>When I'm not debugging, I write stories and poems. This creative outlet helps me approach technical problems with a fresh perspective. I believe the best software engineers are those who can think like artists.</p>
+        </div>
+    </div>
+</div>
+
+        <!-- =========================================
+             PROJECTS SECTION (Case Studies)
+        ========================================== -->
+        <section>
+            <h2>Featured Engineering Case Studies</h2>
+            <p style="color: #94a3b8; margin-bottom: 30px;">Click on the cards to view system architecture and details.</p>
+            
+            <!-- Project 1: Cloud Native API -->
+            <!-- 'onclick' opens the detailed modal. 'preventPropagation' on the icon allows separate link clicking -->
+            <div class="project-card" onclick="openModal('projectModal1')">
+                <div class="card-header">
+                    <h3>Cloud-Native Inventory API</h3>
+                    <!-- Direct Link to Repo -->
+                    <a href="https://github.com/official-noman/django-docker-aws-cicd" target="_blank" class="icon-link" onclick="event.stopPropagation()">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <p>A production-ready 3-Tier REST API deployed on AWS EC2 using Docker, Nginx, and automated CI/CD pipelines.</p>
+                <div class="tech-stack">
+                    <span>Python</span> <span>DRF</span> <span>Docker</span> <span>AWS EC2</span> <span>Nginx</span> <span>CI/CD</span>
+                </div>
+            </div>
+
+            <!-- Project 2: RemakeX AI -->
+            <div class="project-card" onclick="openModal('projectModal2')">
+                <div class="card-header">
+                    <h3>RemakeX: AI Upcycling Platform</h3>
+                    <!-- Direct Link to Repo -->
+                    <a href="https://github.com/official-noman/Remake_X" target="_blank" class="icon-link" onclick="event.stopPropagation()">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <p>Full-stack platform featuring a local AI chatbot (Ollama) for privacy-preserving, offline interactions and product lifecycle management.</p>
+                <div class="tech-stack">
+                    <span>Django</span> <span>Ollama LLM</span> <span>SQLite</span> <span>JavaScript</span> <span>Privacy-First</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =========================================
+             EXPERIENCE & LEADERSHIP SECTION
+        ========================================== -->
+        <section>
+            <h2>Experience & Leadership</h2>
+            
+            <!-- Internship Experience -->
+            <div class="project-card" style="cursor: default; border-left: 4px solid #38bdf8;">
+                <h3 style="color: #fff;">Frontend Developer Intern</h3>
+                <p style="color: var(--accent-primary); font-size: 0.9rem;">Eutropia IT | Aug 2025 - Dec 2025</p>
+                <ul style="margin-left: 20px; color: #cbd5e1; margin-top: 10px;">
+                    <li>Developed responsive UIs using HTML5, CSS3, and JavaScript.</li>
+                    <li>Collaborated with backend teams to integrate APIs, improving load times by 20%.</li>
+                </ul>
+            </div>
+
+            <!-- Co-curricular Activities (Clickable) -->
+            <div class="project-card" onclick="openModal('activityModal')" style="cursor: pointer; margin-top: 20px;">
+                <div class="card-header">
+                    <h3><i class="fa-solid fa-medal" style="color: var(--accent-secondary); margin-right: 10px;"></i> Achievements & Volunteering</h3>
+                    <i class="fa-solid fa-arrow-right icon-link"></i>
+                </div>
+                <p>Former President of UAP Indoor Games Club, ICPC Contestant, and World Finals Volunteer.</p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Abdullah Al Noman. Built with Clean Code.</p>
+        </footer>
+
+    </div>
+
+    <!-- =========================================
+         MODALS (Pop-ups)
+    ========================================== -->
+
+    <!-- 1. Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-box small-box">
+            <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
+            <h3>Get In Touch</h3>
+            <ul class="contact-list">
+                <a href="mailto:official.aanoman@gmail.com">
+                    <li class="contact-item"><i class="fa-solid fa-envelope contact-icon"></i> official.aanoman@gmail.com</li>
+                </a>
+                <a href="tel:+8801880495849">
+                    <li class="contact-item"><i class="fa-solid fa-phone contact-icon"></i> +88 01880495849</li>
+                </a>
+                <a href="https://wa.me/8801880495849" target="_blank">
+                    <li class="contact-item"><i class="fa-brands fa-whatsapp contact-icon"></i> WhatsApp Message</li>
+                </a>
+                <a href="https://www.linkedin.com/in/abdullah-al-noman-772999376/" target="_blank">
+                    <li class="contact-item"><i class="fa-brands fa-linkedin contact-icon"></i> LinkedIn Profile</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 2. Project Modal: Cloud Native API (Details from README) -->
+    <div class="modal-overlay" id="projectModal1">
+        <div class="modal-box large-box">
+            <span class="close-btn" onclick="closeModal('projectModal1')">&times;</span>
+            
+            <h2>🚀 Cloud-Native Inventory Management API</h2>
+            <div class="tech-stack" style="margin-bottom: 20px;">
+                <span>AWS EC2</span> <span>Docker</span> <span>Nginx</span> <span>CI/CD</span>
+            </div>
+
+            <div class="modal-content-scroll">
+                <h4>Overview</h4>
+                <p>A production-ready <strong>3-Tier REST API</strong> built with Django & PostgreSQL, containerized with Docker, served via Nginx Reverse Proxy, and deployed on AWS EC2 with fully automated CI/CD pipelines.</p>
+                
+                <h4>🏗 Architecture</h4>
+                <div class="code-block">
+                    User -> Nginx (Reverse Proxy) -> Django (Gunicorn) -> PostgreSQL
+                    <br>
+                    (Orchestrated by Docker Compose on AWS EC2)
+                </div>
+
+                <h4>🌟 Key Features</h4>
+                <ul>
+                    <li><strong>Containerization:</strong> Fully Dockerized environment ensuring consistency across Dev and Prod.</li>
+                    <li><strong>Reverse Proxy:</strong> Nginx configured as a secure gateway and static file handler.</li>
+                    <li><strong>CI/CD Automation:</strong> GitHub Actions pipeline triggers on every push to build and deploy.</li>
+                    <li><strong>Optimization:</strong> Configured swap memory on AWS EC2 (t2.micro) to prevent OOM crashes.</li>
+                </ul>
+
+                <h4>🛠 Tech Stack</h4>
+                <ul>
+                    <li><strong>Backend:</strong> Python, Django REST Framework</li>
+                    <li><strong>Infrastructure:</strong> AWS EC2 (Ubuntu), Docker, Docker Compose</li>
+                    <li><strong>Database:</strong> PostgreSQL 13 (Persistent Volumes)</li>
+                </ul>
+
+                <br>
+                <a href="https://github.com/official-noman/django-docker-aws-cicd" target="_blank" class="btn btn-primary" style="font-size: 0.9rem;">View Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Project Modal: RemakeX (Details from README) -->
+    <div class="modal-overlay" id="projectModal2">
+        <div class="modal-box large-box">
+            <span class="close-btn" onclick="closeModal('projectModal2')">&times;</span>
+            
+            <h2>♻️ RemakeX: AI-Powered Upcycling</h2>
+            <div class="tech-stack" style="margin-bottom: 20px;">
+                <span>Django</span> <span>Ollama (Local AI)</span> <span>Privacy-First</span>
+            </div>
+
+            <div class="modal-content-scroll">
+                <h4>Overview</h4>
+                <p>Remake_X is a full-stack web application that combines traditional product lifecycle management with a modern, sustainability-focused upcycling workflow. It integrates a <strong>local conversational AI chatbot</strong> powered by <strong>Ollama</strong>.</p>
+                
+                <h4>🤖 Why Ollama & SQLite?</h4>
+                <p>Running LLMs locally ensures <strong>data privacy</strong>, offline capabilities, and zero API costs. SQLite is used for rapid prototyping and ease of portability.</p>
+
+                <h4>🚀 Key Features</h4>
+                <ul>
+                    <li><strong>Local AI Chatbot:</strong> Privacy-preserving, offline LLM interactions (Llama 3 / Mistral).</li>
+                    <li><strong>Upcycling Module:</strong> Track product lifecycle extensions and eco-friendly practices.</li>
+                    <li><strong>Separation of Concerns:</strong> Clear distinction between core logic, UI, and AI services.</li>
+                </ul>
+
+                <h4>🏗 System Architecture</h4>
+                <div class="code-block">
+                    Browser -> Django Views -> Local AI Engine (Ollama)
+                                     |
+                                     v
+                              SQLite Database
+                </div>
+
+                <br>
+                <a href="https://github.com/official-noman/Remake_X" target="_blank" class="btn btn-primary" style="font-size: 0.9rem;">View Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Activity Modal -->
+    <div class="modal-overlay" id="activityModal">
+    <div class="modal-box large-box">
+        <span class="close-btn" onclick="closeModal('activityModal')">&times;</span>
+        <h2>🏆 Activities & Involvements</h2>
+        
+        <div class="modal-content-scroll">
+            
+            <!-- Programming & Ideathon -->
+            <div class="activity-section">
+                <h4>Programming & Innovation</h4>
+                <ul>
+                    <li>Selected for <strong>ICPC 2022 Preliminary</strong>.</li>
+                    <li>Active Participant in multiple Intra-University Programming Contests.</li>
+                    <li>Participant in <strong>Inter-University Ideathon</strong> (Focused on tech-based problem solving).</li>
+                </ul>
+            </div>
+
+            <!-- Leadership -->
+            <div class="activity-section">
+                <h4>Leadership</h4>
+                <p><strong>President | UAP Indoor Games Club</strong></p>
+                <p>Led the club activities, organized tournaments, and managed a team of volunteers.</p>
+            </div>
+
+            <!-- Sports -->
+            <div class="activity-section">
+                <h4>Sports & Teamwork</h4>
+                <p><strong>University Athlete</strong></p>
+                <p>Represented the university in <strong>Inter-University Football Tournament</strong> and <strong>Table Tennis Tournament</strong>.</p>
+            </div>
+
+            <!-- Volunteering -->
+            <div class="activity-section">
+                <h4>Volunteering</h4>
+                <p><strong>Volunteer | 45th ICPC World Finals (Nov '22)</strong></p>
+                <p>Assisted international delegates and managed logistics for the global event in Dhaka.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- Link to the JS file -->
+    <script src="script.js"></script>
+</body>
+</html>
