@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
         
         <!-- HERO SECTION -->
@@ -49,7 +48,7 @@
         </header>
 
         <!-- SKILLS SECTION -->
-        <section>
+        <section class="reveal">
             <h2>Technical Skill</h2>
             
             <div class="skill-category">
@@ -92,7 +91,7 @@
         </section>
 
         <!-- EDUCATION & THESIS SECTION (NEW) -->
-        <section>
+        <section class="reveal">
             <h2>Education & Research</h2>
             
             <!-- Education Card -->
@@ -119,7 +118,7 @@
         </section>
 
         <!-- EXPERIENCE SECTION (UPDATED) -->
-        <section>
+        <section class="reveal">
             <h2>Professional Experience</h2>
             <!-- Current Job: IGL Web Ltd -->
             <div class="project-card" style="cursor: default; border-left: 4px solid #10b981; margin-bottom: 25px;">
@@ -172,7 +171,7 @@
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section>
+        <section class="reveal">
             <h2>Featured Projects</h2>
             
             <!-- Project 1: Multi-Tenant SaaS -->
@@ -218,8 +217,21 @@
             </div>
         </section>
         
+        <!-- GITHUB STATS SECTION -->
+        <section class="reveal">
+            <h2>GitHub Activity</h2>
+            <div class="github-stats-container">
+                <div class="repo-badge-highlight">
+                    <i class="fa-solid fa-code-commit"></i>
+                    <span><strong><span id="dynamic-repo-count">325</span>+</strong> GitHub Contributions</span>
+                </div>
+                <img src="https://github-readme-stats.vercel.app/api?username=official-noman&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1e293b&title_color=38bdf8&text_color=94a3b8&icon_color=818cf8&hide=contribs" alt="GitHub Stats" class="stats-card">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=official-noman&layout=donut&theme=tokyonight&hide_border=true&bg_color=1e293b&title_color=38bdf8&text_color=94a3b8&hide=Java" alt="Top Languages" class="stats-card">
+            </div>
+        </section>
+
         <!-- LEADERSHIP SECTION -->
-        <section>
+        <section class="reveal">
             <h2>Leadership & Activities</h2>
             <div class="project-card" onclick="openModal('activityModal')">
                 <div class="card-header">
@@ -414,17 +426,50 @@
         </div>
     </div>
 
-    <!-- 6. CONTACT MODAL -->
+    <!-- 6. CONTACT MODAL (INTERACTIVE) -->
     <div class="modal-overlay" id="contactModal">
-        <div class="modal-box small-box">
+        <div class="modal-box large-box">
             <span class="close-btn" onclick="closeModal('contactModal')">&times;</span>
-            <h3>Get In Touch</h3>
-            <ul class="contact-list">
-                <a href="mailto:official.aanoman@gmail.com"><li class="contact-item"><i class="fa-solid fa-envelope contact-icon"></i> official.aanoman@gmail.com</li></a>
-                <a href="tel:+8801775664595"><li class="contact-item"><i class="fa-solid fa-phone contact-icon"></i> +880 1775-664595</li></a>
-                <a href="https://github.com/official-noman" target="_blank"><li class="contact-item"><i class="fa-brands fa-github contact-icon"></i> GitHub</li></a>
-                <a href="https://linkedin.com/in/abdullah-al-noman-772999376/" target="_blank"><li class="contact-item"><i class="fa-brands fa-linkedin contact-icon"></i> LinkedIn</li></a>
-            </ul>
+            <h2>Let's Build Something Great</h2>
+            <p style="margin-bottom: 20px;">I'm currently open to new opportunities and collaborations. Fill out the form below or reach out directly.</p>
+            
+            <div class="contact-modal-grid">
+                <div class="contact-info-side">
+                    <a href="mailto:official.aanoman@gmail.com" class="contact-item">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <span>official.aanoman@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+8801775664595" class="contact-item">
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <div>
+                            <strong>Phone</strong>
+                            <span>+880 1775-664595</span>
+                        </div>
+                    </a>
+                    <div class="social-links-row" style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="https://github.com/official-noman" target="_blank" class="btn btn-outline small-btn"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://linkedin.com/in/abdullah-al-noman-772999376/" target="_blank" class="btn btn-outline small-btn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 
